@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+}
+
+.terms-box {
+    max-width: 460px;
+    background-color: #111;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.terms-text {
+    padding: 0 20px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+.terms-text::-webkit-scrollbar {
+    width: 5px;
+    background-color: #333;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+    background-color: #d13639;
+    border-radius: 5px;
+}
+
+.terms-text h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.terms-box h4 {
+    font-size: 13px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.terms-box h4 span {
+    color: #d13639;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    height: 50px;
+    flex: 1;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+}
+
+.red-btn {
+    background-color: #d13639;
+}
+
+.grey-btn {
+    background-color: #3d3d3d;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
