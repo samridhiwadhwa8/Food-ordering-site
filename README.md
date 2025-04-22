@@ -35,7 +35,7 @@ DOWNLOAD OR CLONE THIS REPOSITORY
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/food-ordering-website.git
+git clone https://github.com/samridhiwadhwa8/food-ordering-website.git
 OPEN INDEX.HTML IN YOUR BROWSER
 
 START BROWSING AND PLACING ORDERS!
@@ -52,5 +52,9 @@ ADD USER ACCOUNTS AND ORDER HISTORY
 # 📬 CONTACT
 For questions or suggestions:
 📧 samel1654.becse24@chitkara.edu.in
+
+
 📧 samridhi1656.becse24@chitkara.edu.in
+
+
 📧 samridhi1657.becse24@chitkara.edu.in
