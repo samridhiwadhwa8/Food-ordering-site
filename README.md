@@ -1,2 +1,2 @@
 # Food-ordering-site
-Order your favorite meals from top local restaurants with ease! Browse menus, customize orders, track deliveries in real-time, and enjoy exclusive deals — all from one simple, reliable platform. Fast, easy, and delicious, food is just a click away!
+Craving your favorite meal? Our food ordering site connects you with the best local restaurants, offering a wide variety of cuisines — from sizzling pizzas to fresh sushi. Browse menus, customize your orders, track deliveries in real-time, and enjoy exclusive deals, all from the comfort of your home. Whether it’s a quick lunch or a cozy dinner, we make food ordering fast, easy, and reliable.
