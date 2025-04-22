@@ -1,0 +1,60 @@
+# 🍽️ FOOD ORDERING WEBSITE
+# 📖 ABOUT THE PROJECT
+THIS IS A SIMPLE AND RESPONSIVE FOOD ORDERING WEBSITE THAT ALLOWS USERS TO BROWSE MENUS, SELECT FOOD ITEMS, ADD THEM TO A CART, AND PLACE ORDERS. IT IS BUILT USING HTML, CSS, AND JAVASCRIPT.
+
+# 🚀 FEATURES
+🍕 BROWSE FOOD ITEMS BY CATEGORY
+
+📝 ADD ITEMS TO CART AND VIEW ORDER SUMMARY
+
+💳 SIMPLE ORDER CONFIRMATION
+
+📱 FULLY RESPONSIVE DESIGN FOR MOBILE AND DESKTOP
+
+🎨 CLEAN, USER-FRIENDLY INTERFACE
+
+# 🛠️ TECHNOLOGIES USED
+HTML5
+
+CSS3
+
+JAVASCRIPT
+
+# 📸 SCREENSHOTS
+# 🏠 HOME PAGE
+![Screenshot 2024-12-03 152526](https://github.com/user-attachments/assets/aaafa97c-513a-4899-a217-929fbe665b17)
+# 🍔 FOOD MENU
+![Screenshot 2024-11-26 000819](https://github.com/user-attachments/assets/2a857b65-4d8e-482c-9d46-db17c220c4ac)
+
+# 🛒 Gallery
+![Screenshot 2024-12-03 152726](https://github.com/user-attachments/assets/d83332f3-3c2a-4906-b79e-13413e2dcdda)
+
+# 📂 HOW TO RUN
+DOWNLOAD OR CLONE THIS REPOSITORY
+
+bash
+Copy
+Edit
+git clone https://github.com/samridhiwadhwa8/food-ordering-website.git
+OPEN INDEX.HTML IN YOUR BROWSER
+
+START BROWSING AND PLACING ORDERS!
+
+# ✨ FUTURE IMPROVEMENTS
+ADD REAL-TIME ORDER TRACKING
+
+INTEGRATE PAYMENT GATEWAY
+
+EXPAND RESTAURANT AND MENU DATABASE
+
+ADD USER ACCOUNTS AND ORDER HISTORY
+
+# 📬 CONTACT
+For questions or suggestions:
+📧 samel1654.becse24@chitkara.edu.in
+
+
+📧 samridhi1656.becse24@chitkara.edu.in
+
+
+📧 samridhi1657.becse24@chitkara.edu.in
