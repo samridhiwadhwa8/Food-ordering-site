@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer & FAQ Modal</title>
+  <link rel="stylesheet" href="footer.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container1">
+      <div class="row">
+
+        <!-- Company Section -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Help Centre Section -->
+        <div class="footer-col">
+          <h4>Help Centre</h4>
+          <ul>
+            <li><a href="#faq-modal" class="open-modal">FAQs</a></li>
+            <li><a href="#">Order status</a></li>
+            <li><a href="payment.html">Payment options</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services Section -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Fast Delivery</a></li>
+            <li><a href="#">Easy Payments</a></li>
+            <li><a href="#">24x7 Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAQ MODAL -->
+  <div id="faq-modal" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="close-button">&times;</a>
+      <h2>Frequently Asked Questions</h2>
+      <p>
+        <strong>Q: What is our website?</strong><br>
+        A: Our website is an online platform where you can order food from a variety of local restaurants and have it delivered to your door.
+        <br><br>
+
+        <strong>Q: How does it work?</strong><br>
+        A: Simply browse the menu from your favorite restaurant, select the items you want, place your order, and our delivery team will bring it right to you.
+        <br><br>
+
+        <strong>Q: How do I place an order?</strong><br>
+        A: Choose a restaurant, add items to your cart, and proceed to checkout. You'll receive a confirmation email or notification once your order is placed.
+        <br><br>
+
+        <strong>Q: Can I schedule an order for a later time?</strong><br>
+        A: Yes, you can select a specific time for your order during the checkout process if the restaurant supports scheduled orders.
+        <br><br>
+
+        <strong>Q: How long will delivery take?</strong><br>
+        A: Delivery times vary depending on your location, restaurant preparation time, and traffic conditions. Estimated delivery times are shown before you place your order.
+        <br><br>
+
+        <strong>Q: What should I do if my order is late?</strong><br>
+        A: If your order is late, check the tracking information provided in your order details or contact customer support.
+        <br><br>
+
+        <strong>Q: What payment methods do you accept?</strong><br>
+        A: We accept major credit and debit cards, PayPal, and other payment options like Apple Pay or Google Wallet if available.
+        <br><br>
+
+        <strong>Q: Are there delivery fees?</strong><br>
+        A: Yes, a delivery fee may apply and varies by restaurant and distance. The fee will be displayed at checkout.
+        <br><br>
+
+        <strong>Q: Can I add a tip for the delivery driver?</strong><br>
+        A: Yes, you can add a tip during checkout or after your order is delivered.
+        <br><br>
+
+        <strong>Q: How do I create an account?</strong><br>
+        A: Click on "Sign Up" on our homepage, provide your details, and follow the instructions.
+        <br><br>
+
+        <strong>Q: How can I view my past orders?</strong><br>
+        A: Log in to your account, go to "Order History," and you can see all your past orders.
+        <br><br>
+
+        <strong>Q: What if I need to change or cancel my order?</strong><br>
+        A: Once an order is placed, changes or cancellations may not be possible. Contact customer support for assistance as soon as possible.
+        <br><br>
+
+        <strong>Q: What if there's an issue with my food?</strong><br>
+        A: Please contact customer support immediately. We will work with the restaurant to address any concerns with your order.
+        <br><br>
+
+        <strong>Q: Are there vegetarian/vegan/gluten-free options?</strong><br>
+        A: Yes, many of our partnered restaurants offer special dietary options. You can use filters to find items that suit your dietary needs.
+        <br><br>
+
+        <strong>Q: How do I contact customer support?</strong><br>
+        A: You can reach us via email at [your-email@example.com], phone at [your phone number], or by using the live chat feature on our website.
+      </p>
+    </div>
+  </div>
+
+  <script>
+
+    document.querySelectorAll('.open-modal').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('faq-modal').classList.add('active');
+      });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('faq-modal').classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>
