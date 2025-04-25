@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food ordering website</title>
+    <link rel="stylesheet" href="g21.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <head>
+      <link rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    </head>
+</head>
+<body>
+<!--NAVBAR-->
+    <section class="header">
+  <nav>
+     
+<div class="nav-links">
+    <ul>
+  <li><a href="">HOME</a></li>
+  <li><a href="#about">ABOUT</a></li>
+  <li><a href="ss.html">MENU</a></li>
+  <li><a href="login.html">LOGIN</a></li>
+  <li><a href="project.html">HELP</a></li>
+  <li><a href="recipes.html">RECIPES</a></li>
+  <li><a href="gallery.html">GALLERY</a></li>
+ <button class="offer" onclick="showAlert()">OFFERS</button>
+<div id="alert-box" class="alert-box" style="display: none;">
+    <h2>RECENT OFFER!</h2>
+    <p>GET 10% off<br>
+      <a href="spin.html">test your luck for more</a>
+    </p>
+</div>
+</ul>
+  </nav>
+  <div class="text-box">
+<h2>Amazing & Delicious</h2>
+<h1>Where every flavor<br> tells a story</h1>
+<p>Come with family & feel the joy of mouthwatering food</p>
+  <a href="reservation.html" class="hero-btn">BOOK NOW</a>
+  </div>
+  <button class="button" onclick=(openNewPage())><i class="fa-solid fa-handshake-angle"></i></button>
+    </section>
+    
+    <!--ABOUT-->
+    <section id="about">
+        <div class="container">
+         <div class="title">
+      <h2>About Us</h2>
+      <p></p>
+         </div>
+         <div class="about-content">
+      <div>
+          <p class="para">Welcome to the ultimate food ordering
+               destination that brings you convenience, deliciousness  and a wide variety of food without any distance constraint.We offer quality and convenience to our customers.Discover menus,personalize orders and pay securely all wash within a few steps on our site.Come taste the passion of food with exceptional service at  which you can find the next of your favourite meal</p><br>
+           <p class="para">It's a mission to connect customers with local restaurants, thereby giving them access to the best that the local dining scene has to offer to provide something for every craving, whether it's a quick bite or a gourmet dinner
+        </p>
+    
+         <div class="center">
+            <button id="open-popup">Learn More</button> 
+        </div>
+        <div class="popup" id="popup"> 
+            <div class="overlay"></div>
+            <div class="popup-content">
+                <h3>About Us</h3>
+                <p>
+                    Welcome to (food ordering site name), your cozy food store where every flavor tells a story. The ultimate food ordering
+                    destination that brings you convenience, deliciousness  and a wide variety of food without any distance constraint.We offer quality and convenience to our customers.Discover menus,personalize orders and pay securely all wash within a few steps on our site.Come taste the passion of food with exceptional service at  which you can find the next of your favourite meal<br>
+                    It provides information, menus and user-reviews on the food they tried from us. We provide drivers flexible opportunities to work and earn. It allows you to find every type of cuisine under one website.Assurance of Quality is the background of our food ordering site ensuring freshness and reliability of food items for our users. The Healthy section of the (website) provides information about the food, including calories and macronutrients. Feel free to customize this to fit you brand and services!<br>
+                    Deliciousness is just a click away! With just a few clicks, you can explore our diverse menu filled with mouthwatering options crafted to satisfy every craving.Whether you are in the mood of comfort food ,healthy chocies or international flavours ,we've got you covered.<br>
+                    Explore our seasonal specials, place orders and let us bring the flavors of our kitchen to your doorstep.<br><br>
+                    <span>Flavor that make you Dance!</span>
+                    <div class="image_container">
+                    <img src="https://www.eatingwell.com/thmb/m5xUzIOmhWSoXZnY-oZcO9SdArQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg" alt="Food">
+                    <img src="https://media.istockphoto.com/id/1054319798/photo/group-of-happy-friends-having-breakfast-in-the-restaurant.jpg?s=612x612&w=0&k=20&c=rdb2gaIzr5n2eZthvK1B73LQa3yapubVD2AM_-SF50o=">
+                    <img src="https://media.istockphoto.com/id/1377926786/photo/teenage-girl-having-breakfast.jpg?s=612x612&w=0&k=20&c=1A8qPEUmQH4Tsgbav1jOK4IYX74T_5mkyvfplB0lATc="></div>
+                </p>
+                <div class="controls">
+                    <button class="close-btn">Close</button> 
+                </div>
+            </div>
+        </div>
+      </div>
+      <img src="https://i.pinimg.com/564x/d2/99/84/d2998466673853a621932b8ba74801f1.jpg" class="image">
+         </div>
+        </div>
+        </section>
+        <section class="menu-section">
+            <h1 style="text-align: center;">OUR FAVES</h1>
+            <hr>
+            <div id="card-area">
+               <div class="wrappper">
+                   <div class="box-area">
+                       <div class="box">
+                           <img src="pizza.jpg" alt="pizza">
+                           <div class="overlay">
+                               <h3>pizza</h3>
+                               <p style="text-align: center;">Made with different toppings. 
+                                   Some of the most common toppings are cheese, sausages, pepperoni,
+                                    vegetables, tomatoes, spices and herbs and basil. </p><br>
+                                <a href="ss.html">Buy now</a>
+                           </div>
+                       </div>
+                       <div class="box">
+                           <img src="Homemade French Fries with Ketchup, Salt and Pepper on a white p.jpg" alt="pizza">
+                           <div class="overlay">
+                               <h3>Fries</h3>
+                               <p>elit. In, explicabo? Praesentium esse necessitatibus nobis saepe ullam quibusdam eaque accusamus enim eum molestias nemo nostrum vero inventore illo!</p><br>
+                                <a href="ss.html">Buy now</a>
+                           </div>
+                       </div>
+                       <div class="box">
+                           <img src="Almond Flour Gluten-Free Tart Crust • The Bojon Gourmet.jpg" alt="pizza">
+                           <div class="overlay">
+                               <h3>cake</h3>
+                               <p>elit. In, explicabo? Praesentium esse necessitatibus aut aperiam natus, nobis saepe ullam quibusdam eaque accusamus enim eum molestias nemo nostrum vero inventore illo!</p><br>
+                              <a href="ss.html">Buy now</a>
+                           </div>
+                       </div>
+                       <div class="box">
+                           <img src="tacos.jpg" alt="pizza">
+                           <div class="overlay">
+                               <h3>Tacos</h3>
+                               <p>This is the ultimate Tacos that's easy to make, holds together well and is incredibly delicious with bursting flavors of spices!</p><br>
+                           <a href="ss.html">Buy now</a>
+                           </div>
+                       </div>
+                   </div>
+               </div><br><br><br><br>
+               <!--WHY US-->
+
+        <!--SALE-->
+        <section class="sale-section">
+            <div class="sale">
+            </div>
+           </section>
+          <div class="cont">
+            <div class="section">
+              <div class="laptop-mockup">
+                <div class="laptop">
+                  <div class="laptop-screen">
+                    <div class="video-container">
+                      <img src="Screenshot 2024-11-26 000819.png"class=laptop-video>
+                      
+                    </div>
+                  </div>
+                  <div class="laptop-keyboard"></div>
+                </div>
+              </div>
+              <div class="features">
+                <h2 class="section-title">Why Us?</h2>
+                <div class="feature-item">
+                  <div class="feature-icon">🍟</div>
+                  <div class="feature-content">
+                    <h3>1st point</h3>
+                    <p>simplify the process of finding, ordering, and paying for meals. Customers can explore menus, customize orders, and make payments online without visiting the restaurant.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">🍔</div>
+                  <div class="feature-content">
+                    <h3>2nd point</h3>
+                    <p>Online menus often allow for precise customization of meals (e.g., dietary restrictions, allergies), making it easier for customers to get exactly what they want.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">🍕</div>
+                  <div class="feature-content">
+                    <h3>3rd point</h3>
+                    <p>highlight diverse cuisines, promoting cultural awareness and allowing users to explore new dishes without having to leave home.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+ <!--HEALTHY SECTION-->
+ <div class="body">
+    <h1 class="h1">HEALTHY FOOD</h1>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="download (5).jpg" alt="Project 1">
+                <div class="gallery-item-content">
+                    <h2>TACOS</h2>
+                    <p>Tacos are a traditional Mexican dish consisting of a folded or rolled tortilla.</p>
+
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyQX84Iwk4UlEAy5-E_tNM3vr_YdNVjsvA2w&s" alt="Project 2">
+                <div class="gallery-item-content">
+                    <h2>AVOCADO EGG TOAST</h2>
+                    <p>Avocado egg toast is a popular breakfast dish featuring toasted bread topped with mashed avocado.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://unpeeledjournal.com/wp-content/uploads/2020/04/51193168830_afd1731b55_b.jpg" alt="Project 3">
+                <div class="gallery-item-content">
+                    <h2>OATMEAL PORRIDGE</h2>
+                    <p>Oatmeal porridge is a warm, hearty dish made from oats cooked in milk or water.</p>
+
+                </div>
+            </div>
+            <div class="gallery-item"> 
+                <img src="https://i.pinimg.com/736x/e8/86/14/e886148d1715ca36cbf3a544386130a6.jpg" alt="Project 4">
+                <div class="gallery-item-content">
+                    <h2>SALAD</h2>
+                    <p>A salad is a dish typically made with a variety of fresh vegetables, greens, fruits, nuts.</p>
+
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://eatplant-based.com/wp-content/uploads/2014/12/Veggie-Wraps.jpg" alt="Project 5">
+                <div class="gallery-item-content">
+                    <h2>VEGGIE WRAP</h2>
+                    <p>A veggie wrap is a healthy, portable meal made by wrapping a variety of fresh vegetables like lettuce, tomatoes.</p>
+
+                </div>
+            </div>
+            <div class="gallery-item">
+             <img src="https://alldayidreamaboutfood.com/wp-content/uploads/2022/09/The-Best-Brownie-Cheesecake.jpg" alt="Project 5">
+             <div class="gallery-item-content">
+                 <h2>KETO BROWNIES</h2>
+                 <p>Keto brownies are a low-carb, sugar-free version of traditional brownies and a sugar substitute like stevia or erythritol.</p>
+
+             </div>
+         </div>
+         <div class="gallery-item">
+           <img src="https://pancakerecipes.com/wp-content/uploads/2021/04/peanut-butter-banana-pancakes-1500-18-Square.jpg" alt="Project 5">
+           <div class="gallery-item-content">
+               <h2>PEANUT BUTTER PANCAKE</h2>
+               <p>delicious pancakes infused with creamy peanut butter, giving them a rich, nutty flavor.</p>
+                 </div>
+       </div>
+        </div>
+    </div>
+
+    </div>
+    <section class="end">
+    
+
+    
+
+ 
+ <!--FOOTER-->
+ <footer class="footer">
+    <div class="container1">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help Centre</h4>
+          <ul>
+            <li><a href="#faq-modal" class="open-modal">FAQs</a></li>
+            <li><a href="#">Order status</a></li>
+            <li><a href="payment.html">Payment options</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Fast Delivery</a></li>
+            <li><a href="#">Easy Payments</a></li>
+            <li><a href="#">24x7 Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+ 
+  <div id="faq-modal" class="modal-overlay">
+    <div class="modal-box">
+      <a href="#" class="close-button">&times;</a>
+      <h2>Frequently Asked Questions</h2>
+      <p>
+        <strong>
+        Q: What is our website?</strong><br>
+A: our website is an online platform where you can order food from a variety of local restaurants and have it delivered to your door.
+<br><br>
+<strong>Q: How does it work?</strong><br>
+A: Simply browse the menu from your favorite restaurant, select the items you want, place your order, and our delivery team will bring it right to you.
+<br><br>
+
+<strong>Q: How do I place an order?</strong><br>
+A: Choose a restaurant, add items to your cart, and proceed to checkout. You'll receive a confirmation email or notification once your order is placed.
+<br><br>
+
+<strong>Q: Can I schedule an order for a later time?</strong><br>
+A: Yes, you can select a specific time for your order during the checkout process if the restaurant supports scheduled orders.
+<br><br>
+<strong>Q: How long will delivery take?</strong><br>
+A: Delivery times vary depending on your location, restaurant preparation time, and traffic conditions. Estimated delivery times are shown before you place your order<br><br>.
+
+<strong>Q: What should I do if my order is late?</strong><br>
+A: If your order is late, check the tracking information provided in your order details or contact customer support.
+<br><br>
+<strong>Q: What payment methods do you accept?</strong><br>
+A: We accept major credit and debit cards, PayPal, and [other payment options like Apple Pay or Google Wallet if available].
+<br><br>
+<strong>Q: Are there delivery fees?</strong><br>
+A: Yes, a delivery fee may apply and varies by restaurant and distance. The fee will be displayed at checkout.
+<br><br>
+<strong>Q: Can I add a tip for the delivery driver?</strong><br>
+A: Yes, you can add a tip during checkout or after your order is delivered.
+<br><br>
+<strong>
+Q: How do I create an account?</strong><br>
+<br>A: Click on "Sign Up" on our homepage, provide your details, and follow the instructions.<br>
+
+<strong>Q: How can I view my past orders?</strong><br>
+A: Log in to your account, go to "Order History," and you can see all your past orders.<br><br>
+
+<strong>Q: What if I need to change or cancel my order?</strong><br>
+A: Once an order is placed, changes or cancellations may not be possible. Contact customer support for assistance as soon as possible.
+<br><br>
+<strong>Q: What if there's an issue with my food?</strong><br>
+A: Please contact customer support immediately. We will work with the restaurant to address any concerns with your order.
+<br><br>
+<strong>Q: Are there vegetarian/vegan/gluten-free options?</strong><br>
+A: Yes, many of our partnered restaurants offer special dietary options. You can use filters to find items that suit your dietary needs.
+<br><br>
+<strong>Q: How do I contact customer support?</strong><br>
+A: You can reach us via email at [your-email@example.com], phone at [your phone number], or by using the live chat feature on our website.<br><br>
+      </p>
+    </div>
+  </div>
+  
+  </body>
+  </html>
+</section>
+<script src="aboutus.js"></script>
+</body>
+</html>
