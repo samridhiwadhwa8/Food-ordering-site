@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Slider</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card-text {
+            color: black;
+        }
+
+        .modal-body {
+            color: black;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-body{background-color: rgb(240, 192, 192);
+        }
+
+        
+.carousel .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Hover effect on each card */
+.carousel .card:hover {
+    transform: scale(1.05); /* Scales the card by 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow to give depth */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Recipes By Our Chefs!</h1><br><br>
+
+        <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" data-toggle="modal" data-target="#recipeModal1">
+                                <img src="tacos.jpg" class="card-img-top" alt="Tacos">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tacos</h5>
+                                    <p class="card-text">A taco is a traditional Mexican dish consisting of a folded or rolled tortilla filled with various ingredients like meat, beans, cheese, and vegetables.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" data-toggle="modal" data-target="#recipeModal2">    <!--this links carousel to the modal-->
+                                <img src="download.jpg" class="card-img-top" alt="Avocado Toast">
+                                <div class="card-body">
+                                    <h5 class="card-title">Avocado Toast</h5>
+                                    <p class="card-text">Avocado toast is a dish featuring avocado spread on toasted bread, with seasonings or toppings like eggs, tomatoes, or herbs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" data-toggle="modal" data-target="#recipeModal3">
+                                <img src="mojito.jpg" class="card-img-top" alt="Virgin Mojito">
+                                <div class="card-body">
+                                    <h5 class="card-title">Virgin Mojito</h5>
+                                    <p class="card-text">A virgin mojito is a refreshing non-alcoholic cocktail made with mint, lime, sugar, soda water, and ice. The lime and mint are muddled together with touch of sugar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" data-toggle="modal" data-target="#recipeModal4">
+                                <img src="brownies.jpg" class="card-img-top" alt="Keto Brownies">
+                                <div class="card-body">
+                                    <h5 class="card-title">Keto Brownies</h5>
+                                    <p class="card-text">Keto brownies are low-carb chocolate brownies made with keto-friendly ingredients like almond flour.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" data-toggle="modal" data-target="#recipeModal5">
+                                <img src="fruits.jpg" class="card-img-top" alt="Tropical Symphony Bowl">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tropical Symphony Bowl</h5>
+                                    <p class="card-text">A colorful and refreshing fruit bowl made with various fresh fruits, served chilled.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" data-toggle="modal" data-target="#recipeModal6">
+                                <img src="pizza.jpg" class="card-img-top" alt="Savoury Delight Pizza">
+                                <div class="card-body">
+                                    <h5 class="card-title">Savoury Delight Pizza</h5>
+                                    <p class="card-text">Pizza is a popular dish that consists of a round, flat base of dough topped with various ingredients pepperoni, vegetables, olives,including meats and flakes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Recipe Modals -->
+        <!-- Recipe Modal 1 -->
+        <div class="modal fade" id="recipeModal1" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeModalLabel1">Recipe for Tacos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ingredients:<br>
+                            8 small corn or flour tortillas<br>
+                            1 lb ground beef or canned black beans (drained and rinsed)<br>
+                            1 packet taco seasoning (optional)<br>
+                            1 cup shredded lettuce<br>
+                            1 cup diced tomatoes<br>
+                            1 cup shredded cheese (cheddar or Mexican blend)<br>
+                            Salsa or hot sauce<br>
+                            Optional toppings: sour cream, avocado, cilantro
+                        </p>
+                        <p>Instructions:<br><br>
+                            1. Cook the Filling: In a skillet, brown the ground beef over medium heat, breaking it apart. Drain excess fat.<br><br>
+                            2. Add taco seasoning and water (if using) and simmer for about 5 minutes. If using beans, heat them until warm.<br><br>
+                            3. Warm the Tortillas: Heat tortillas in a dry skillet for about 30 seconds on each side or wrap in foil and warm in the0 oven.<br><br>
+                            4. Assemble the Tacos: Place a few spoonfuls of the meat or beans in the center of each tortilla. Top with shredded lettuce, diced tomatoes, and cheese.<br><br>
+                            5. Add Toppings: Drizzle with salsa or hot sauce, and add any additional toppings you like.<br><br>
+                            6. Serve: Fold the tortillas and enjoy your delicious tacos!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Modal 2 -->
+        <div class="modal fade" id="recipeModal2" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeModalLabel2">Recipe for Avocado Toast</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ingredients:<br>
+                            1 ripe avocado<br>
+                            2 slices of bread (your choice)<br>
+                            Salt and pepper to taste<br>
+                            Optional toppings: red pepper flakes, lemon juice, sliced tomatoes, or poached egg.
+                        </p>
+                        <p>Instructions:<br><br>
+                            1. Toast the Bread: Toast the slices of bread until golden brown.<br><br>
+                            2. Prepare the Avocado: In a bowl, mash the avocado with a fork and season with salt, pepper, and lemon juice if desired.<br><br>
+                            3. Spread: Spread the mashed avocado evenly over the toasted bread.<br><br>
+                            4. Add Toppings: Add any additional toppings you like.<br><br>
+                            5. Serve: Enjoy immediately!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Modal 3 -->
+        <div class="modal fade" id="recipeModal3" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel3" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeModalLabel3">Recipe for Virgin Mojito</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ingredients:<br>
+                            Fresh mint leaves<br>
+                            1 lime (cut into wedges)<br>
+                            2 tablespoons sugar<br>
+                            Ice cubes<br>
+                            Soda water<br>
+                            Optional: fresh fruits for garnish
+                        </p>
+                        <p>Instructions:<br><br>
+                            1. Muddle the Mint: In a glass, muddle the mint leaves and lime wedges with the sugar to release the mint oils and lime juice.<br><br>
+                            2. Fill with Ice: Add ice cubes to the glass.<br><br>
+                            3. Add Soda Water: Pour soda water over the ice and stir well.<br><br>
+                            4. Garnish: Garnish with extra mint leaves or fruit slices.<br><br>
+                            5. Serve: Enjoy your refreshing drink!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Modal 4 -->
+        <div class="modal fade" id="recipeModal4" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel4" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeModalLabel4">Recipe for Keto Brownies</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ingredients:<br>
+                            1 cup almond flour<br>
+                            1/2 cup cocoa powder<br>
+                            1/2 cup sweetener (erythritol or stevia)<br>
+                            1/2 cup butter (melted)<br>
+                            3 large eggs<br>
+                            1 teaspoon vanilla extract<br>
+                            1/2 teaspoon baking powder
+                        </p>
+                        <p>Instructions:<br><br>
+                            1. Preheat the Oven: Preheat your oven to 350°F (175°C) and grease an 8-inch square baking dish.<br><br>
+                            2. Mix Dry Ingredients: In a bowl, combine almond flour, cocoa powder, sweetener, and baking powder.<br><br>
+                            3. Add Wet Ingredients: Add melted butter, eggs, and vanilla extract to the dry ingredients and mix until well combined.<br><br>
+                            4. Bake: Pour the batter into the prepared dish and spread evenly. Bake for 20-25 minutes.<br><br>
+                            5. Cool: Allow to cool before cutting into squares.<br><br>
+                            6. Serve: Enjoy your low-carb brownies!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Modal 5 -->
+        <div class="modal fade" id="recipeModal5" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel5" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeModalLabel5">Recipe for Tropical Symphony Bowl</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ingredients:<br>
+                            1 banana<br>
+                            1 cup pineapple chunks<br>
+                            1 cup mango chunks<br>
+                            1 cup coconut yogurt<br>
+                            Optional: shredded coconut, granola, chia seeds for topping
+                        </p>
+                        <p>Instructions:<br><br>
+                            1. Prepare the Fruits: Slice the banana and prepare the other fruits.<br><br>
+                            2. Layer the Ingredients: In a bowl, layer the coconut yogurt, followed by the fruits.<br><br>
+                            3. Add Toppings: Top with shredded coconut, granola, and chia seeds.<br><br>
+                            4. Serve: Enjoy your colorful and healthy bowl!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipe Modal 6 -->
+        <div class="modal fade" id="recipeModal6" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel6" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeModalLabel6">Recipe for Savoury Delight Pizza</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ingredients:<br>
+                            1 pizza dough (store-bought or homemade)<br>
+                            1 cup pizza sauce<br>
+                            2 cups shredded mozzarella cheese<br>
+                            Toppings of your choice (pepperoni, bell peppers, mushrooms, olives, etc.)
+                        </p>
+                        <p>Instructions:<br><br>
+                            1. Preheat the Oven: Preheat your oven to 475°F (245°C).<br><br>
+                            2. Prepare the Dough: Roll out the pizza dough on a floured surface to your desired thickness.<br><br>
+                            3. Add Sauce: Spread pizza sauce evenly over the dough.<br><br>
+                            4. Add Cheese and Toppings: Sprinkle mozzarella cheese on top and add your chosen toppings.<br><br>
+                            5. Bake: Place the pizza on a baking sheet and bake for 12-15 minutes or until the crust is golden and cheese is bubbling.<br><br>
+                            6. Serve: Let cool for a few minutes, then slice and enjoy your delicious pizza!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
