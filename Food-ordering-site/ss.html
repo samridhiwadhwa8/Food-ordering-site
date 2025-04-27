@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+#veg-button {background-color: green;
+    border-radius: 50px;
+color: whitesmoke;
+height:30px;
+width: 90px;}
+
+#non-veg-button{
+    background-color: red;
+color: whitesmoke;
+height:30px;
+border-radius: 50px;
+width: 90px;;
+}
+
+<!--rough-->
+#veg-button, #non-veg-button {
+  float: right;
+  margin: 10px;
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#veg-button, #non-veg-button {
+  margin: 10px;
+  border: none;
+}
+.offer-alert {
+    background-color: #ff3737; /* Red color */
+    color: #FFFFFF; /* White text color */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.content-above h1{
+    text-align: center;
+    justify-content: center;
+}
+.content-above p{
+    text-align: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Hover Effect for menu cards*/
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Pop-out effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Style for card hover effect */
+.card {
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: rgb(245, 153, 153);
+    color: white; /* Optionally change the text color to white for better contrast */
+}
+.btn-danger {
+    background-color: red; /* Red background */
+    color: white !important; /* White text */
+    padding: 10px 20px !important; /* Reduced padding (top-bottom, left-right) */
+    border-radius: 8px !important; /* Slightly smaller rounded corners */
+    font-size: 14px; /* Reduced font size */
+}
+
+/* cart box*/
+.cart-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="offer-alert">
+        Limited Time Offer! Get 20% off on all orders!
+      </div>    
+<div class="button-container">
+      <button id="veg-button">Veg</button>
+<button id="non-veg-button">Non-Veg</button>
+</div>
+  <!-- Bootstrap Grid of Cards -->
+<div class="content-above">
+    <h1>Welcome to Our Food Store</h1>
+    <p>Check out our delicious offerings!</p>
+</div>
+
+
+<!-- Cards Grid Container -->
+<div class="grid-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <img src="italian.jpg" alt="Delicious Burger">
+        <div class="card-body">
+            <h5 class="card-title">Delicious Burger</h5>
+            <p class="veg">A tasty burger made with fresh ingredients.</p>
+            <button class="btn btn-danger add-to-cart  ">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <img src="pizza.jpeg" alt="Spicy Pizza">
+        <div class="card-body">
+            <h5 class="card-title">Spicy Pizza</h5>
+            <p class="veg">A hot and spicy pizza topped with fresh veggies.</p>
+            <button class="btn btn-danger add-to-cart ">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <img src="bowl.jpg" alt="Healthy Salad">
+        <div class="card-body">
+            <h5 class="card-title">Healthy Salad</h5>
+            <p class="veg">A refreshing salad with mixed greens and dressing.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <img src="smoothie.jpg" alt="Fresh Smoothie">
+        <div class="card-body">
+            <h5 class="card-title">Fresh Smoothie</h5>
+            <p class="veg">A fruity smoothie made with organic fruits.</p><br>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+        <img src="wrap.jpg" alt="Chicken Tikka Wrap">
+        <div class="card-body">
+            <h5 class="card-title">Chicken Tikka Wrap</h5>
+            <p class="non-veg">A light and healthy wrap filled with veggies.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+        <img src="fruits.jpg" alt="Tropical Symphony Bowl">
+        <div class="card-body">
+            <h5 class="card-title">Tropical Symphony Bowl</h5>
+            <p class="veg">A bowl filled with tropical fruits and goodness.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+        <img src="tacos.jpg" alt="Tacos">
+        <div class="card-body">
+            <h5 class="card-title">Tasty Tacos</h5>
+            <p class="card-text">Freshly made tacos with a mix of flavorful fillings.</p>
+            <button class="btn btn-danger  add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="cupcakes.jpg" alt="cupcakes">
+        <div class="card-body">
+            <h5 class="card-title">cupcakes</h5>
+            <p class="non-veg"> Soft, miniature cakes topped with creamy frosting</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="pastry.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">pastry</h5>
+            <p class="veg">A flaky, buttery dough filled with sweet ingredients</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="nachos.jpg">
+        <div class="card-body">
+            <h5 class="card-title">Baked Nachos</h5>
+            <p class="veg"> appetizer made by layering tortilla chips with melted cheese</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="ramen.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">Ramen noodles</h5>
+            <p class="non-veg"> traditional Japanese noodle soup dish consisting of Chinese-style wheat noodles .</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="soup.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">Mushroom soup</h5>
+            <p class="veg">A creamy, savory soup made with fresh mushrooms, herbs. .</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="sushi.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">Sushi</h5>
+            <p class="veg">A Japanese dish featuring vinegared rice.</p>
+            <button class="btn btn-danger ">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="pasta.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">pastry</h5>
+            <p class="veg">Freshly made tacos with a mix of flavorful fillings.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="sandwiches.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">Sandwiches with fries</h5>
+            <p class="veg">  A hearty meal featuring layers ofcheeses and veggies</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="doughnuts.jpg.png">
+        <div class="card-body">
+            <h5 class="card-title">Doughnuts</h5>
+            <p class="veg">Soft, fried rings of dough, often glazed or topped with sugar, sprinkles.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="hotdog.png">
+        <div class="card-body">
+            <h5 class="card-title">Hotdog</h5>
+            <p class="veg">A grilled or steamed sausage, usually served in a soft bun.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Samosa.png">
+        <div class="card-body">
+            <h5 class="card-title">Samosa</h5>
+            <p class="veg"> A crispy, triangular pastry filled with spiced potatoes.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="chicken.png">
+        <div class="card-body">
+            <h5 class="card-title">Chicken with rice</h5>
+            <p class="non-veg">Tender, seasoned chicken served over fluffy rice.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="dahipurichaat.png">
+        <div class="card-body">
+            <h5 class="card-title">Dahi puri chaat</h5>
+            <p class="veg">A popular Indian street food made with crispy puris filled with spiced potatoes.</p>
+            <button class="btn btn-danger  add-to-cart">Add to Cart</button>
+        </div>
+    </div><div class="card">
+        <img src="chickenwithcheese.png">
+        <div class="card-body">
+            <h5 class="card-title">Cheesy chicken</h5>
+            <p class="non-veg">Juicy, tender chicken baked or grilled with a rich layer of melted cheese</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="brushetta.png">
+        <div class="card-body">
+            <h5 class="card-title">Brushetta toast</h5>
+            <p class="veg">Grilled or toasted bread topped with a mix of fresh veggies.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="vanilla.png">
+        <div class="card-body">
+            <h5 class="card-title">Vanilla Panna Cotta</h5>
+            <p class="non-veg">A silky, creamy Italian dessert made with sweetened cream .</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="murmura.png">
+        <div class="card-body">
+            <h5 class="card-title">Spicy murmuma</h5>
+            <p class="veg">A crunchy Indian snack made with puffed rice.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="watermelon.png">
+        <div class="card-body">
+            <h5 class="card-title">Watermelon slushie</h5>
+            <p class="veg">A refreshing, icy drink made from blended watermelon.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="thali.png">
+        <div class="card-body">
+            <h5 class="card-title">North Indian Thali</h5>
+            <p class="veg"> A traditional platter offering  dal, sabzi, roti, rice, pickle, raita, and a sweet.</p>
+            <button class="btn btn-danger  add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="pancake.png">
+        <div class="card-body">
+            <h5 class="card-title">Pancake</h5>
+            <p class="non-veg"> A soft, fluffy breakfast treat made from a batter of flour, eggs, and milk.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="bowl3.png">
+        <div class="card-body">
+            <h5 class="card-title">Teriyaki chicken poke bowl</h5>
+            <p class="non-veg"> A flavorful bowl featuring tender teriyaki-glazed chicken.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="dimsum.png">
+        <div class="card-body">
+            <h5 class="card-title">Dimsums</h5>
+            <p class="veg"> A Chinese cuisine tradition featuring small, bite-sized portions of food.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="lasagna.png">
+        <div class="card-body">
+            <h5 class="card-title">lasagna</h5>
+            <p class="veg">A classic Italian dish made with layers of wide, flat pasta sheets.</p>
+            <button class="btn btn-danger add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart-box">
+        <p>Items in cart: <span class="item-count">0</span></p>
+    </div>
+</div>
+
+  
+</body>
+<script>
+   let itemCount = 0;
+
+document.addEventListener("DOMContentLoaded", function() {
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            itemCount++;
+            updateCartBox();
+        });
+    });
+});
+
+function updateCartBox() {
+    const cartBox = document.querySelector(".cart-box");
+    const itemCountSpan = cartBox.querySelector(".item-count");
+
+    itemCountSpan.textContent = itemCount;
+
+    if (itemCount > 0) {
+        cartBox.style.display = "block";
+    } else {
+        cartBox.style.display = "none";
+    }
+}
+
+<!--veg non-veg-->
+// Get the buttons and menu options
+const vegButton = document.getElementById('veg-button');
+const nonVegButton = document.getElementById('non-veg-button');
+const menuOptions = document.querySelectorAll('.card');
+
+// Add event listeners to the buttons
+vegButton.addEventListener('click', () => {
+  menuOptions.forEach(option => {
+    if (option.querySelector('p').classList.contains('veg')) {
+      option.style.display = 'block';
+    } else {
+      option.style.display = 'none';
+    }
+  });
+});
+
+nonVegButton.addEventListener('click', () => {
+  menuOptions.forEach(option => {
+    if (option.querySelector('p').classList.contains('non-veg')) {
+      option.style.display = 'block';
+    } else {
+      option.style.display = 'none';
+    }
+  });
+});
+</script>
+
+</html>

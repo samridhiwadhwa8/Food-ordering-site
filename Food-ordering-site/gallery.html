@@ -1,0 +1,128 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <!--this is gallery of website-->
+    <!--GALLERY OF FOOD ORDERING WEBSITE-->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Food Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+            transition: transform 0.2s; /* Animation on hover */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center">Our Gallery</h1><br><br>
+        <div class="gallery">
+            <img src="bowl.jpg" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
+            <img src="brownies.jpg" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
+            <img src="mojito.jpg" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
+            <img src="pizza.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="Premium Photo _ Flying burger on a white background.jpg" alt="Image 5" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="Itburger.jpg" alt="Image 6" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="sweet.jpg" alt="Image 7" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="cupcakes.jpg" alt="Image 8" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="tacos.jpg" alt="Image 9" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="fruits.jpg" alt="Image 10" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="yumdrink.jpg" alt="Image 11" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="sweet.jpg" alt="Image 12" data-bs-toggle="modal" data-bs-target="#imageModal4">
+        </div>
+    </div>
+
+    
+
+    <!-- Modals for larger images -->
+    <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel1">Image 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="download 3.jpg" class="img-fluid" alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel2">Image 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/500?text=Image+2" class="img-fluid" alt="Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel3">Image 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/500?text=Image+3" class="img-fluid" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="modal fade" id="imageModal4" tabindex="-1" aria-labelledby="imageModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel4">Image 4</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://via.placeholder.com/500?text=Image+4" class="img-fluid" alt="Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

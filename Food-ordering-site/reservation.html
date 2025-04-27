@@ -1,0 +1,319 @@
+<!--RESERVATION TABLE--><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #f9d835;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1;
+  text-align: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #fff;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #444;
+  color: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #f9d835;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f9d835;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff0101;
+}
+
+.error-message {
+  font-size: 12px;
+  color: #f44336;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.valid {
+  border-color: #4caf50 !important;
+}
+
+.invalid {
+  border-color: #f44336 !important;
+}
+
+/* Mobile and Tablet Responsiveness */
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}
+
+
+    </style>        
+</head>
+<body>
+    <div class="container">
+        <h1>Book Now</h1>
+        <p></p>
+        <form id="reservationForm" class="form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName">Your full name ?</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+                    <div class="error-message" id="fullNameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your email address ?</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="people">How many people ?</label>
+                    <select id="people" name="people">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                    </select>
+                    <div class="error-message" id="peopleError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="time">What time ?</label>
+                    <input type="time" id="time" name="time">
+                    <div class="error-message" id="timeError"></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">What is the date ?</label>
+                    <input type="date" id="date" name="date">
+                    <div class="error-message" id="dateError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Your phone number ?</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+       const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const people = document.getElementById('people');
+const time = document.getElementById('time');
+const date = document.getElementById('date');
+const phone = document.getElementById('phone');
+const form = document.getElementById('reservationForm');
+
+// Add event listeners for real-time validation
+fullName.addEventListener('input', validateFullName);
+email.addEventListener('input', validateEmail);
+people.addEventListener('change', validatePeople);
+time.addEventListener('input', validateTime);
+date.addEventListener('input', validateDate);
+phone.addEventListener('input', validatePhone);
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const isFormValid = [validateFullName(), validateEmail(), validatePeople(), validateTime(), validateDate(), validatePhone()].every(Boolean);
+
+  if (isFormValid) {
+    alert("Form Submitted Successfully");
+  }
+});
+
+function validateFullName() {
+  const value = fullName.value.trim();
+  // Regular expression to allow only alphabets and underscores
+  const regex = /^[a-zA-Z_]+$/;
+  if (!value) {
+    setError(fullName, "Full name is required!");
+    return false;
+  } else if (!regex.test(value)) {
+    setError(fullName, "Please enter alphabets only or an underscore.");
+    return false;
+  } else {
+    setSuccess(fullName);
+    return true;
+  }
+}
+
+function validateEmail() {
+  const value = email.value.trim();
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!value || !regex.test(value)) {
+    setError(email, "Please enter a valid email address!");
+    return false;
+  } else {
+    setSuccess(email);
+    return true;
+  }
+}
+
+function validatePeople() {
+  const value = people.value.trim();
+  if (!value || value === "0") {
+    setError(people, "Please select number of people!");
+    return false;
+  } else {
+    setSuccess(people);
+    return true;
+  }
+}
+
+function validateTime() {
+  const value = time.value.trim();
+  if (!value) {
+    setError(time, "Please select a time!");
+    return false;
+  } else {
+    setSuccess(time);
+    return true;
+  }
+}
+
+function validateDate() {
+  const value = date.value.trim();
+  if (!value) {
+    setError(date, "Please select a date!");
+    return false;
+  } else {
+    setSuccess(date);
+    return true;
+  }
+}
+
+function validatePhone() {
+  const value = phone.value.trim();
+  const regex = /^[0-9]{10}$/;
+  if (!value || !regex.test(value)) {
+    setError(phone, "Please enter a valid phone number!");
+    return false;
+  } else {
+    setSuccess(phone);
+    return true;
+  }
+}
+
+function setError(input, message) {
+  const errorElement = document.getElementById(input.id + "Error");
+  input.classList.add('invalid');
+  input.classList.remove('valid');
+  errorElement.textContent = message;
+}
+
+function setSuccess(input) {
+  const errorElement = document.getElementById(input.id + "Error");
+  input.classList.add('valid');
+  input.classList.remove('invalid');
+  errorElement.textContent = '';
+}
+
+    </script>
+</body>
+</html>
