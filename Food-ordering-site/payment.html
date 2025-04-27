@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            background: linear-gradient(90deg, #080808 60%, #4c4b4a 40.1%);
+        }
+
+        .container form {
+            padding: 20px;
+            width: 700px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        }
+
+        .container form .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .container form .row .col {
+            flex: 1 1 250px;
+        }
+
+        .container form .row .col .title {
+            font-size: 20px;
+            color: #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .container form .row .col .inputBox {
+            margin: 15px 0;
+        }
+
+        .container form .row .col .inputBox span {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .container form .row .col .inputBox input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 15px;
+            text-transform: none;
+            margin-bottom: 5px; 
+        }
+
+        .container form .row .col .inputBox input:focus {
+            border: 1px solid #000;
+        }
+
+        .container form .row .col .flex {
+            display: flex;
+            gap: 15px;
+        }
+
+        .container form .row .col .inputBox img {
+            height: 34px;
+            margin-top: 5px;
+            filter: drop-shadow(0 0 1px #000);
+        }
+
+        .container form .submit-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            background: #040404;
+            color: #fff;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .container form .submit-btn:hover {
+            background: red;
+        }
+
+       
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block; 
+        }
+
+        .invalid {
+            border: 1px solid red;
+        }
+
+        .valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <form id="checkoutForm">
+
+        <div class="row">
+
+            <div class="col">
+                <h3 class="title">Billing Address</h3>
+
+                <div class="inputBox">
+                    <span>Full Name :</span>
+                    <input type="text" id="fullName" placeholder="John Doe">
+                    <div class="error" id="fullNameError"></div> 
+                </div>
+
+                <div class="inputBox">
+                    <span>Email :</span>
+                    <input type="email" id="email" placeholder="example@example.com">
+                    <div class="error" id="emailError"></div> 
+                </div>
+
+                <div class="inputBox">
+                    <span>Address :</span>
+                    <input type="text" id="address" placeholder="Room - Street - Locality">
+                    <div class="error" id="addressError"></div> 
+                </div>
+
+                <div class="inputBox">
+                    <span>City :</span>
+                    <input type="text" id="city" placeholder="Mumbai">
+                    <div class="error" id="cityError"></div> 
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>State :</span>
+                        <input type="text" id="state" placeholder="India">
+                        <div class="error" id="stateError"></div> 
+                    </div>
+                    <div class="inputBox">
+                        <span>Zip Code :</span>
+                        <input type="text" id="zip" placeholder="123 456">
+                        <div class="error" id="zipError"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3 class="title">Payment</h3>
+
+                <div class="inputBox">
+                    <span>Name on Card :</span>
+                    <input type="text" id="cardName" placeholder="Mr. John Doe">
+                    <div class="error" id="cardNameError"></div>
+                </div>
+
+                <div class="inputBox">
+                    <span>Credit Card Number :</span>
+                    <input type="number" id="cardNumber" placeholder="1111-2222-3333-4444">
+                    <div class="error" id="cardNumberError"></div> 
+                </div>
+
+                <div class="inputBox">
+                    <span>Exp Month :</span>
+                    <input type="text" id="expMonth" placeholder="January">
+                    <div class="error" id="expMonthError"></div> 
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Exp Year :</span>
+                        <input type="number" id="expYear" placeholder="2022">
+                        <div class="error" id="expYearError"></div>
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" id="cvv" placeholder="123">
+                        <div class="error" id="cvvError"></div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <input type="submit" value="Proceed to Checkout" class="submit-btn">
+
+    </form>
+
+</div>
+
+<script>
+
+const fullName = document.getElementById('fullName');
+const email = document.getElementById('email');
+const address = document.getElementById('address');
+const city = document.getElementById('city');
+const state = document.getElementById('state');
+const zip = document.getElementById('zip');
+const cardName = document.getElementById('cardName');
+const cardNumber = document.getElementById('cardNumber');
+const expMonth = document.getElementById('expMonth');
+const expYear = document.getElementById('expYear');
+const cvv = document.getElementById('cvv');
+
+
+const fullNameError = document.getElementById('fullNameError');
+const emailError = document.getElementById('emailError');
+const addressError = document.getElementById('addressError');
+const cityError = document.getElementById('cityError');
+const stateError = document.getElementById('stateError');
+const zipError = document.getElementById('zipError');
+const cardNameError = document.getElementById('cardNameError');
+const cardNumberError = document.getElementById('cardNumberError');
+const expMonthError = document.getElementById('expMonthError');
+const expYearError = document.getElementById('expYearError');
+const cvvError = document.getElementById('cvvError');
+
+
+function setError(input, errorElement, message) {
+    input.classList.add('invalid');
+    input.classList.remove('valid');
+    errorElement.textContent = message;
+}
+
+
+function setSuccess(input, errorElement) {
+    input.classList.add('valid');
+    input.classList.remove('invalid');
+    errorElement.textContent = '';
+}
+
+
+fullName.addEventListener('input', function () {
+    const regex = /^[a-zA-Z_]+$/; 
+    const value = fullName.value.trim();
+    if (!value) {
+        setError(fullName, fullNameError, "Full name is required!");
+    } else if (!regex.test(value)) {
+        setError(fullName, fullNameError, "Please enter alphabets only or an underscore.");
+    } else {
+        setSuccess(fullName, fullNameError);
+    }
+});
+
+
+email.addEventListener('input', function () {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const value = email.value.trim();
+    if (!value || !regex.test(value)) {
+        setError(email, emailError, "Please enter a valid email address!");
+    } else {
+        setSuccess(email, emailError);
+    }
+});
+
+
+address.addEventListener('input', function () {
+    const value = address.value.trim();
+    if (!value) {
+        setError(address, addressError, "Address is required!");
+    } else {
+        setSuccess(address, addressError);
+    }
+});
+
+
+city.addEventListener('input', function () {
+    const value = city.value.trim();
+    if (!value) {
+        setError(city, cityError, "City is required!");
+    } else {
+        setSuccess(city, cityError);
+    }
+});
+
+
+state.addEventListener('input', function () {
+    const value = state.value.trim();
+    if (!value) {
+        setError(state, stateError, "State is required!");
+    } else {
+        setSuccess(state, stateError);
+    }
+});
+
+
+zip.addEventListener('input', function () {
+    const regex = /^[0-9]{3}\s?[0-9]{3}$/;
+    const value = zip.value.trim();
+    if (!value || !regex.test(value)) {
+        setError(zip, zipError, "Please enter a valid zip code (e.g., 123 456)!");
+    } else {
+        setSuccess(zip, zipError);
+    }
+});
+
+
+cardName.addEventListener('input', function () {
+    const value = cardName.value.trim();
+    if (!value) {
+        setError(cardName, cardNameError, "Card name is required!");
+    } else {
+        setSuccess(cardName, cardNameError);
+    }
+});
+
+
+cardNumber.addEventListener('input', function () {
+    const regex = /^[0-9]{16}$/;
+    const value = cardNumber.value.trim();
+    if (!value || !regex.test(value)) {
+        setError(cardNumber, cardNumberError, "Please enter a valid credit card number!");
+    } else {
+        setSuccess(cardNumber, cardNumberError);
+    }
+});
+
+
+expMonth.addEventListener('input', function () {
+    const value = expMonth.value.trim();
+    if (!value) {
+        setError(expMonth, expMonthError, "Expiration month is required!");
+    } else {
+        setSuccess(expMonth, expMonthError);
+    }
+});
+
+
+expYear.addEventListener('input', function () {
+    const value = expYear.value.trim();
+    if (!value) {
+        setError(expYear, expYearError, "Expiration year is required!");
+    } else {
+        setSuccess(expYear, expYearError);
+    }
+});
+
+
+cvv.addEventListener('input', function () {
+    const regex = /^[0-9]{3}$/;
+    const value = cvv.value.trim();
+    if (!value || !regex.test(value)) {
+        setError(cvv, cvvError, "Please enter a valid CVV!");
+    } else {
+        setSuccess(cvv, cvvError);
+    }
+});
+</script>
+</body>
+</html>
