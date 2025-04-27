@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="terms.css">
+</head>
+<body>
+    <!--Terms and condition-->
+    <div class="terms-box">
+        <div class="terms-text">
+            <h2>Terms &amp; Conditions</h2>
+            <p>Greetings, Users!</p>
+            <p>By accessing and using this website, you agree to be bound by the following terms and conditions. All content provided on this website is for informational purposes only and is protected by copyright laws. You may not reproduce, distribute, or use any materials without prior permission. We reserve the right to modify or discontinue the website or its content at any time without notice. Your use of the website is at your own risk; we are not liable for any damages resulting from its use. By continuing to browse this site, you also agree to our Privacy Policy, which governs the collection and use of your personal data. If you disagree with these terms, please refrain from using the website. For questions, contact us at (email)</p>
+        </div>
+        <h4>I Agree to the <span>Terms &amp; Conditions</span> and I read the Privacy Policy</h4>
+        <div class="buttons">
+            <button id="agreeBtn" class="btn red-btn">Agree</button>
+            <button id="disagreeBtn" class="btn grey-btn">Disagree</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const agreeBtn = document.getElementById('agreeBtn');
+            const disagreeBtn = document.getElementById('disagreeBtn');
+
+            disagreeBtn.addEventListener('click', () => {
+                alert('You must agree to the terms and conditions to proceed.');
+            });
+        });
+    </script>
+</body>
+</html>
+

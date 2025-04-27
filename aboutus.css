@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 2rem;
+}
+
+#about .container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+#about .title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#about h2 {
+    font-size: 40px;
+    color: #383438;
+    margin-bottom: 10px;
+}
+
+#about .about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.para {
+    color: #383838;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 15px;            
+    margin-top: 10px;     
+}
+.image-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.4s;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+.center {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#open-popup {
+    color: #fff;
+    background: #0b0a0b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#open-popup:hover {
+    background: #d32f2f;
+    transition: 0.4s;
+}
+
+.image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.4s;
+    padding: 35px;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.active {
+    display: flex;
+}
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;            
+    max-width: 600px;       
+    max-height: 80vh; 
+    overflow-y: auto; 
+    border: 2px solid #0b0a0b; 
+}
+
+.popup-content h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.popup-content p {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 10px;
+}
+.popup-content img {
+    display: inline-block;        
+    width: 150px;                
+    height: auto;                
+    margin-right: 10px;          
+    border-radius: 5px;           
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls .close-btn {
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
