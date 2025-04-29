@@ -43,23 +43,6 @@ DOWNLOAD OR CLONE THIS REPOSITORY
 Open bash and copy the following command:
 git clone https://github.com/samridhiwadhwa8/food-ordering-website.git
 
-
-# 🏠 HOME PAGE
-![Screenshot 2024-12-03 152526](https://github.com/user-attachments/assets/aaafa97c-513a-4899-a217-929fbe665b17)
-# 🍔 FOOD MENU
-![Screenshot 2024-11-26 000819](https://github.com/user-attachments/assets/2a857b65-4d8e-482c-9d46-db17c220c4ac)
-
-# 🛒 Gallery
-![Screenshot 2024-12-03 152726](https://github.com/user-attachments/assets/d83332f3-3c2a-4906-b79e-13413e2dcdda)
-
-# 📂 HOW TO RUN
-DOWNLOAD OR CLONE THIS REPOSITORY
-
-bash
-Copy
-Edit
-git clone https://github.com/samridhiwadhwa8/food-ordering-website.git
-
 OPEN INDEX.HTML IN YOUR BROWSER
 
 START BROWSING AND PLACING ORDERS!
